@@ -32,7 +32,7 @@ jobs:
         run: "pnpm installl"
 
       - name: Build step
-        run: "npm run build"
+        run: "pnpm dev  "
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
@@ -40,5 +40,5 @@ jobs:
           project: "lirenkl-prompt-opti-54"
           entrypoint: "jsr:@deno/nextjs-start"
           root: "."
-          include: .next, public
+          
           
